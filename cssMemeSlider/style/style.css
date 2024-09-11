@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #282825;
+    font-size: 1.2em;
+    color: white;
+}
+
+.conteiner{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blok-mem-picture{
+    width: 90%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture-mem{
+    height: 50vh;
+    border-radius: 5%;
+}
+
+.hide_mem{
+    display: none;
+}
+
+.show_mem{
+    display: block;
+}
+
+.blok-desc-but{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.blok-description-mem{
+    width: 50%;
+}
+
+.blok-button{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.but_checkbox{
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border: 2px solid #d9d99b;
+    background-color: #d9d99b;
+    cursor: pointer;
+}
+
+.but_checkbox.active{
+    border: 2px solid #d9d99b;
+    background-color: #282825;
+}
+
+.but_checkbox:hover {
+    background-color: white;
+    border: 2px solid white;
+}
+
+.but_checkbox.active:hover {
+    border: 2px solid white;
+    background-color: #282825;
+}
