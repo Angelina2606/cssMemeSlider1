@@ -6,32 +6,47 @@ body{
     color: white;
 }
 
+p{
+    margin: 0;
+    margin-top: 0.2em;
+}
+
 .conteiner{
-    width: 70vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .blok-mem-picture{
-    width: 90%;
+    width: 100%;
     padding: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+@keyframes fade {
+    from {
+     opacity: 0;
+     }
+     to {
+      opacity: 1;
+     }
+   }
 
 .picture-mem{
-    height: 50vh;
-    border-radius: 5%;
+    width: 60vw;
+    border-radius: 4%;
+    animation: fade 3s ease;
 }
+
 
 .hide_mem{
     display: none;
 }
 
-.show_mem{
-    display: block;
+p{
+    /* margin-top: 0; */
 }
 
 .blok-desc-but{
@@ -56,22 +71,51 @@ body{
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
-    border: 2px solid #d9d99b;
-    background-color: #d9d99b;
+    border: 3px solid #3460f1;
+    background-color: #3460f1;
     cursor: pointer;
 }
 
 .but_checkbox.active{
-    border: 2px solid #d9d99b;
+    border: 3px solid #3460f1;
     background-color: #282825;
 }
 
 .but_checkbox:hover {
     background-color: white;
-    border: 2px solid white;
+    border: 3px solid white;
 }
 
 .but_checkbox.active:hover {
-    border: 2px solid white;
+    border: 3px solid white;
     background-color: #282825;
+}
+
+.description-mem{
+    
+    animation: fade 3s ease;
+}
+
+@media (max-device-width:729px) {
+    .blok-desc-but{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+
+    .blok-description-mem{
+        width: 100%;
+    }
+
+    .blok-button{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    p{
+        margin: 0;
+        margin-top: 0.3em;
+    }
 }
