@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     justify-content: center;
     background-color: #282825;
@@ -6,66 +6,50 @@ body{
     color: white;
 }
 
-p{
-    margin: 0;
-    margin-top: 0.2em;
-}
-
-.conteiner{
+.container {
     width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.blok-mem-picture{
+.hide_mem {
+    display: none;
+}
+
+.blok-mem-picture {
     width: 100%;
     padding: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-@keyframes fade {
-    from {
-     opacity: 0;
-     }
-     to {
-      opacity: 1;
-     }
-   }
 
-.picture-mem{
+.picture-mem {
     width: 60vw;
     border-radius: 4%;
-    animation: fade 3s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
 }
 
-
-.hide_mem{
-    display: none;
-}
-
-p{
-    /* margin-top: 0; */
-}
-
-.blok-desc-but{
+.blok-desc-but {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.blok-description-mem{
+.blok-description-mem {
     width: 50%;
 }
 
-.blok-button{
+.blok-button {
     display: flex;
     width: 50%;
     justify-content: flex-end;
 }
 
-.but_checkbox{
+.but_checkbox {
     padding: 0.5em;
     margin: 0.5em;
     width: 1.5em;
@@ -76,46 +60,59 @@ p{
     cursor: pointer;
 }
 
-.but_checkbox.active{
-    border: 3px solid #3460f1;
-    background-color: #282825;
-}
-
 .but_checkbox:hover {
     background-color: white;
     border: 3px solid white;
 }
 
-.but_checkbox.active:hover {
-    border: 3px solid white;
-    background-color: #282825;
+#mem_1 {
+    background-image: url(../assets/mem7k.jpg);
 }
 
-.description-mem{
-    
-    animation: fade 3s ease;
+#mem_2 {
+    background-image: url(../assets/mem5k.jpg);
 }
 
-@media (max-device-width:729px) {
-    .blok-desc-but{
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        
-    }
+#mem_3 {
+    background-image: url(../assets/mem8k.jpg);
+}
 
-    .blok-description-mem{
-        width: 100%;
-    }
+#mem_4 {
+    background-image: url(../assets/mem4_2k.png);
+}
 
-    .blok-button{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
+/* Селекторы для переключения изображений и описаний */
+#r1:checked ~ .blok-mem-picture #mem_1,
+#r1:checked ~ .blok-description-mem #desc_mem_1 {
+    display: block;
+}
 
-    p{
-        margin: 0;
-        margin-top: 0.3em;
-    }
+#r2:checked ~ .blok-mem-picture #mem_2,
+#r2:checked ~ .blok-description-mem #desc_mem_2 {
+    display: block;
+}
+
+#r3:checked ~ .blok-mem-picture #mem_3,
+#r3:checked ~ .blok-description-mem #desc_mem_3 {
+    display: block;
+}
+
+#r4:checked ~ .blok-mem-picture #mem_4,
+#r4:checked ~ .blok-description-mem #desc_mem_4 {
+    display: block;
+}
+
+/* Скрываем остальные изображения и описания */
+#r1:not(:checked) ~ .blok-mem-picture #mem_1,
+#r2:not(:checked) ~ .blok-mem-picture #mem_2,
+#r3:not(:checked) ~ .blok-mem-picture #mem_3,
+#r4:not(:checked) ~ .blok-mem-picture #mem_4 {
+    display: none;
+}
+
+#r1:not(:checked) ~ .blok-description-mem #desc_mem_1,
+#r2:not(:checked) ~ .blok-description-mem #desc_mem_2,
+#r3:not(:checked) ~ .blok-description-mem #desc_mem_3,
+#r4:not(:checked) ~ .blok-description-mem #desc_mem_4 {
+    display: none;
 }

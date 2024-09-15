@@ -10,12 +10,12 @@
 
 <body>
     <main>
-        <div class="conteiner">
+        <div class="container">
             <div class="blok-mem-picture">
-                <img alt="mem1" id="mem_1" class="picture-mem" src="assets/mem7k.jpg">
-                <img alt="mem2" id="mem_2" class="picture-mem hide_mem" src="assets/mem5k.jpg">
-                <img alt="mem3" id="mem_3" class="picture-mem hide_mem" src="assets/mem8k.jpg">
-                <img alt="mem4" id="mem_4"class="picture-mem hide_mem" src="assets/mem4_2k.png">
+                <div id="mem_1" class="picture-mem"></div>
+                <div id="mem_2" class="picture-mem hide_mem"></div>
+                <div id="mem_3" class="picture-mem hide_mem"></div>
+                <div id="mem_4" class="picture-mem hide_mem"></div>
             </div>
             <div class="blok-desc-but">
                 <div class="blok-description-mem">
@@ -25,19 +25,21 @@
                     <p class="description-mem hide_mem" id="desc_mem_4">Невидимая ошибка в строке 42</p>
                 </div>
                 <div class="blok-button">
-                    <button class="but_checkbox active" id="but_1">
-                    </button>
-                    <button class="but_checkbox" id="but_2">
-                    </button>
-                    <button class="but_checkbox" id="but_3">
-                    </button>
-                    <button class="but_checkbox" id="but_4">
-                    </button>
+                    <input type="radio" name="mem" id='r1' class="but_checkbox" checked>
+                    <label for='r1'></label>
+
+                    <input type="radio" name="mem" id='r2' class="but_checkbox">
+                    <label for='r2'></label>
+
+                    <input type="radio" name="mem" id='r3' class="but_checkbox">
+                    <label for='r3'></label>
+
+                    <input type="radio" name="mem" id='r4' class="but_checkbox">
+                    <label for='r4'></label>
                 </div>
             </div>
         </div>
     </main>
-    <script src="index.js"></script>
 </body>
 
 </html>
